@@ -1,0 +1,7 @@
+aws_region           = "ap-northeast-1"
+api_name             = "pillow-api"
+api_stage_name       = "prod"
+api_path_part        = "image"
+lambda_function_name = "pillow-lambda"
+source_dir           = "../app"
+path_to_zip_file     = "app.zip"
