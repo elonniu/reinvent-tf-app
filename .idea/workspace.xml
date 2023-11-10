@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e44b7c28-9bfb-4c13-a3f1-8bde2ec0ea36" name="Changes" comment="fixed bug for shell">
+      <change afterPath="$PROJECT_DIR$/demo2/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/reinvent2023.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reinvent2023.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/start-api.sh" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/start-api.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/app/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/app/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/invoke.sh" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/invoke.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/start-api.sh" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/start-api.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/terraform.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/terraform.tfvars" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="k93p35mj" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2Xy9sB6rO4AL10zWUeusgKwcRFs" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/home/ubuntu/IdeaProjects/reinvent2023/demo2/build.sh",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/demo2" />
+      <recent name="$PROJECT_DIR$/demo1" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e44b7c28-9bfb-4c13-a3f1-8bde2ec0ea36" name="Changes" comment="" />
+      <created>1699590657704</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699590657704</updated>
+      <workItem from="1699590661143" duration="5802000" />
+      <workItem from="1699596483474" duration="1808000" />
+    </task>
+    <task id="LOCAL-00001" summary="improved design">
+      <option name="closed" value="true" />
+      <created>1699591336720</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699591336720</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fixed bug for shell">
+      <option name="closed" value="true" />
+      <created>1699591526469</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699591526469</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed bug for shell">
+      <option name="closed" value="true" />
+      <created>1699596407100</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699596407100</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="improved design" />
+    <MESSAGE value="fixed bug for shell" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug for shell" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

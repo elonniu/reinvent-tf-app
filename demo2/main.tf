@@ -22,7 +22,7 @@ resource "aws_api_gateway_method" "ApiMethod" {
 
 module "lambda" {
   source            = "terraform-aws-modules/lambda/aws"
-  version           = "5.2.0"
+  version           = "6.4.0"
   function_name     = var.lambda_function_name
   timeout           = 30
   description       = var.lambda_function_description
