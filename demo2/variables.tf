@@ -12,6 +12,7 @@ variable "lambda_function_name" {
 variable "lambda_function_description" {
   description = "The description of the Lambda function"
   type        = string
+  default     = "Lambda function to resize images"
 }
 
 variable "lambda_handler" {
@@ -23,7 +24,7 @@ variable "lambda_handler" {
 variable "lambda_runtime" {
   description = "The runtime for the Lambda function"
   type        = string
-  default     = "python3.8"
+  default     = "python3.10"
 }
 
 variable "api_name" {

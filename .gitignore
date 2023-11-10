@@ -33,3 +33,8 @@ builds
 /demo1/app.zip
 *.tfsstate
 *.tfstate.backup
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.tfstate.lock.info
+.aws-sam-iacs
+.idea
