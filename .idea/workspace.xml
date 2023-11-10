@@ -5,38 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e44b7c28-9bfb-4c13-a3f1-8bde2ec0ea36" name="Changes" comment="fixed bug for shell">
-      <change afterPath="$PROJECT_DIR$/demo1/PyBuild.ps1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo1/api.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo1/function.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo1/py_build.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo1/samconfig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo2/api.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo2/function.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo2/samconfig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/.terraform.lock.hcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/event.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/invoke-url.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/invoke.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/start-api.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/start-lambda.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/.terraform.lock.hcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/event.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/invoke-url.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/invoke.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/api.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/api.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/function.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/function.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/outputs.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/terraform.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/terraform.tfvars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/api.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/api.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/function.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/function.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo2/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/outputs.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/start-api.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/start-lambda.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/demo2/terraform.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/terraform.tfvars" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo2/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/watch-and-run.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,27 +43,27 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/home/ubuntu/IdeaProjects/reinvent2023/demo1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ruby.rails.projectView.checked": "true",
-    "settings.editor.selected.configurable": "watcher.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ubuntu/IdeaProjects/reinvent2023/demo1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/demo1" />
@@ -115,6 +93,7 @@
       <workItem from="1699605205189" duration="9000" />
       <workItem from="1699605236849" duration="7000" />
       <workItem from="1699605520025" duration="3262000" />
+      <workItem from="1699608824299" duration="976000" />
     </task>
     <task id="LOCAL-00001" summary="improved design">
       <option name="closed" value="true" />
@@ -148,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699598303068</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed bug for shell">
+      <option name="closed" value="true" />
+      <created>1699608928974</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699608928974</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

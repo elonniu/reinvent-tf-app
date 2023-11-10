@@ -1,14 +1,15 @@
-output "api_endpoint" {
-  description = "Base url for api"
-  value       = aws_api_gateway_stage.stage.invoke_url
+output "lambda_function_name" {
+  value = module.lambda_function_app.lambda_function_name
 }
 
-output "http_api_logs_command" {
-  description = "Command to view http api logs with sam"
-  value       = "sam logs --cw-log-group ${aws_cloudwatch_log_group.logs.name} -t"
+output "api_gateway_invoke_url" {
+  value = aws_api_gateway_deployment.api_deployment.invoke_url
 }
 
-output "responder_logs_command" {
-  description = "Command to view responder function logs with sam"
-  value       = "sam logs --cw-log-group ${module.lambda_function_responder.lambda_cloudwatch_log_group_name} -t"
+output "lambda_function_console_url" {
+  value = "https://console.aws.amazon.com/lambda/home?region=${var.aws_region}#/functions/${module.lambda_function_app.lambda_function_name}"
+}
+
+output "api_gateway_console_url" {
+  value = "https://console.aws.amazon.com/apigateway/home?region=${var.aws_region}#/apis/${aws_api_gateway_rest_api.api.id}/resources/${aws_api_gateway_resource.api_resource.id}/methods/POST"
 }

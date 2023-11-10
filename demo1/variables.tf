@@ -15,18 +15,6 @@ variable "lambda_function_description" {
   default     = "Lambda function to resize images"
 }
 
-variable "lambda_handler" {
-  description = "The function entrypoint in your code"
-  type        = string
-  default     = "app.lambda_handler"
-}
-
-variable "lambda_runtime" {
-  description = "The runtime for the Lambda function"
-  type        = string
-  default     = "python3.10"
-}
-
 variable "api_name" {
   description = "The name of the API Gateway"
   type        = string
@@ -38,24 +26,25 @@ variable "api_description" {
   default     = "API linked to Lambda"
 }
 
-variable "api_stage_name" {
-  description = "The stage name for the deployment of the API Gateway"
-  type        = string
-  default     = "prod"
-}
-
-variable "api_path_part" {
-  description = "The path for the API Gateway"
-  type        = string
-  default     = "image"
-}
-
-variable "source_dir" {
-  description = "Local path to the Lambda function code"
-  type        = string
-}
-
 variable "path_to_zip_file" {
   description = "Local path to the zipped Lambda function code"
   type        = string
+}
+
+variable "profile" {
+  description = "AWS profile"
+  type        = string
+  default     = "default"
+}
+
+variable "config_location" {
+  description = "AWS configuration file"
+  type        = string
+  default     = "~/.aws/config"
+}
+
+variable "creds_location" {
+  description = "AWS credentials file"
+  type        = string
+  default     = "~/.aws/credentials"
 }

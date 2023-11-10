@@ -1,4 +1,3 @@
-
 resource "aws_iam_role" "lambda_role" {
   assume_role_policy = <<EOF
 {
@@ -20,15 +19,11 @@ EOF
 resource "aws_lambda_function" "lambda" {
   filename      = var.path_to_zip_file
   function_name = var.lambda_function_name
-  handler       = var.lambda_handler
+  handler       = "app.lambda_handler"
   description   = var.lambda_function_description
   role          = aws_iam_role.lambda_role.arn
-  timeout       = 30
   runtime       = "python3.10"
 }
-
-
-
 
 resource "aws_iam_role_policy" "test_lambda_policy" {
   role   = aws_iam_role.lambda_role.name
@@ -53,5 +48,5 @@ resource "aws_lambda_permission" "LambdaPermission" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.lambda.function_name
   principal     = "apigateway.amazonaws.com"
-  source_arn    = "${aws_api_gateway_rest_api.RestAPI.execution_arn}/*/*"
+  source_arn    = "${aws_api_gateway_rest_api.api.execution_arn}/*/*"
 }
