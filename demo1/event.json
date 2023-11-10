@@ -1,0 +1,125 @@
+{
+  "resource": "/image",
+  "path": "/image",
+  "httpMethod": "POST",
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Cache-Control": "no-cache",
+    "CloudFront-Forwarded-Proto": "https",
+    "CloudFront-Is-Desktop-Viewer": "true",
+    "CloudFront-Is-Mobile-Viewer": "false",
+    "CloudFront-Is-SmartTV-Viewer": "false",
+    "CloudFront-Is-Tablet-Viewer": "false",
+    "CloudFront-Viewer-ASN": "16509",
+    "CloudFront-Viewer-Country": "JP",
+    "Content-Type": "application/json",
+    "Host": "f006pwugvf.execute-api.ap-northeast-1.amazonaws.com",
+    "Postman-Token": "3184928b-e53b-4b0e-8494-055c8341a7cc",
+    "User-Agent": "PostmanRuntime/7.34.0",
+    "Via": "1.1 0706bdcc30b9021a492a2676497fddf2.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Id": "cjjIiBNCSw3Z01p96xqTqGyhhcQodzELZCcWn97mEBZUIYCsZw5yKQ==",
+    "X-Amzn-Trace-Id": "Root=1-654dab97-4ee553bc2dc6f6f470602f55",
+    "X-Forwarded-For": "35.74.35.160, 130.176.135.132",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https"
+  },
+  "multiValueHeaders": {
+    "Accept": [
+      "*/*"
+    ],
+    "Accept-Encoding": [
+      "gzip, deflate, br"
+    ],
+    "Cache-Control": [
+      "no-cache"
+    ],
+    "CloudFront-Forwarded-Proto": [
+      "https"
+    ],
+    "CloudFront-Is-Desktop-Viewer": [
+      "true"
+    ],
+    "CloudFront-Is-Mobile-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-SmartTV-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-Tablet-Viewer": [
+      "false"
+    ],
+    "CloudFront-Viewer-ASN": [
+      "16509"
+    ],
+    "CloudFront-Viewer-Country": [
+      "JP"
+    ],
+    "Content-Type": [
+      "application/json"
+    ],
+    "Host": [
+      "f006pwugvf.execute-api.ap-northeast-1.amazonaws.com"
+    ],
+    "Postman-Token": [
+      "3184928b-e53b-4b0e-8494-055c8341a7cc"
+    ],
+    "User-Agent": [
+      "PostmanRuntime/7.34.0"
+    ],
+    "Via": [
+      "1.1 0706bdcc30b9021a492a2676497fddf2.cloudfront.net (CloudFront)"
+    ],
+    "X-Amz-Cf-Id": [
+      "cjjIiBNCSw3Z01p96xqTqGyhhcQodzELZCcWn97mEBZUIYCsZw5yKQ=="
+    ],
+    "X-Amzn-Trace-Id": [
+      "Root=1-654dab97-4ee553bc2dc6f6f470602f55"
+    ],
+    "X-Forwarded-For": [
+      "35.74.35.160, 130.176.135.132"
+    ],
+    "X-Forwarded-Port": [
+      "443"
+    ],
+    "X-Forwarded-Proto": [
+      "https"
+    ]
+  },
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
+  "requestContext": {
+    "resourceId": "0xspie",
+    "resourcePath": "/image",
+    "httpMethod": "POST",
+    "extendedRequestId": "OKe_wF5NtjMETew=",
+    "requestTime": "10/Nov/2023:04:03:35 +0000",
+    "path": "/prod/image",
+    "accountId": "448353841126",
+    "protocol": "HTTP/1.1",
+    "stage": "prod",
+    "domainPrefix": "f006pwugvf",
+    "requestTimeEpoch": 1699589015712,
+    "requestId": "c37dbfd9-64e4-4f8b-8bc9-dffd8d2be10d",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "35.74.35.160",
+      "principalOrgId": null,
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "PostmanRuntime/7.34.0",
+      "user": null
+    },
+    "domainName": "f006pwugvf.execute-api.ap-northeast-1.amazonaws.com",
+    "apiId": "f006pwugvf"
+  },
+  "body": "{\n    \"bucket\": \"elonniu\",\n    \"key\": \"dog.jpeg\",\n    \"rotate\": 90\n}",
+  "isBase64Encoded": false
+}
