@@ -22,7 +22,7 @@ resource "aws_api_gateway_method" "ApiMethod" {
 
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_dir  = "app"
+  source_dir  = var.source_dir
   output_path = var.path_to_zip_file
 }
 
