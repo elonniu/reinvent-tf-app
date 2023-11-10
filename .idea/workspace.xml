@@ -5,17 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e44b7c28-9bfb-4c13-a3f1-8bde2ec0ea36" name="Changes" comment="fixed bug for shell">
-      <change afterPath="$PROJECT_DIR$/demo2/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/reinvent2023.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reinvent2023.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/start-api.sh" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/start-api.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/app/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/app/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/invoke.sh" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/invoke.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/PyBuild.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/api.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/function.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/py_build.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/samconfig.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo2/api.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo2/function.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo2/samconfig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/.terraform.lock.hcl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/event.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/invoke-url.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/invoke.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/start-api.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/start-lambda.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/.terraform.lock.hcl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/event.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/invoke-url.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/invoke.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/demo2/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/start-api.sh" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/start-api.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/outputs.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/start-api.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/start-lambda.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/demo2/terraform.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/terraform.tfvars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/watch-and-run.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +75,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/home/ubuntu/IdeaProjects/reinvent2023/demo2/build.sh",
+    "last_opened_file_path": "/home/ubuntu/IdeaProjects/reinvent2023/demo1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,8 +88,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/demo2" />
       <recent name="$PROJECT_DIR$/demo1" />
+      <recent name="$PROJECT_DIR$/tf-zip-based" />
+      <recent name="$PROJECT_DIR$/tf-serverless" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/zip_based" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -80,7 +107,14 @@
       <option name="presentableId" value="Default" />
       <updated>1699590657704</updated>
       <workItem from="1699590661143" duration="5802000" />
-      <workItem from="1699596483474" duration="1808000" />
+      <workItem from="1699596483474" duration="2269000" />
+      <workItem from="1699598832591" duration="393000" />
+      <workItem from="1699599574784" duration="984000" />
+      <workItem from="1699602282674" duration="135000" />
+      <workItem from="1699603240829" duration="179000" />
+      <workItem from="1699605205189" duration="9000" />
+      <workItem from="1699605236849" duration="7000" />
+      <workItem from="1699605520025" duration="3262000" />
     </task>
     <task id="LOCAL-00001" summary="improved design">
       <option name="closed" value="true" />
@@ -106,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699596407100</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixed bug for shell">
+      <option name="closed" value="true" />
+      <created>1699598303068</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699598303068</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

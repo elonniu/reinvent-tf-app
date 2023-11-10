@@ -10,14 +10,14 @@ logger = Logger()
 
 def lambda_handler(event, context):
     logger.info(event)
+    queryStringParameters = event['queryStringParameters']
+    logger.info(queryStringParameters)
 
     try:
-        body = json.loads(event['body'])
-        logger.info(body)
 
-        bucket = body['bucket']
-        key = body['key']
-        rotate = body['rotate']
+        bucket = queryStringParameters['bucket']
+        key = queryStringParameters['key']
+        rotate = queryStringParameters['rotate']
 
         file_byte_string = s3.get_object(Bucket=bucket, Key=key)['Body'].read()
 
@@ -46,8 +46,8 @@ def lambda_handler(event, context):
         return {
             "statusCode": 200,
             "body": json.dumps({
-                "parameters": body,
-                "presigned_url11": presigned_url,
+                "queryStringParameters": queryStringParameters,
+                "presigned_url2": presigned_url,
             })
         }
     except Exception as e:
