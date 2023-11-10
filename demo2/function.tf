@@ -1,4 +1,4 @@
-module "lambda_function_app" {
+module "lambda" {
   source              = "terraform-aws-modules/lambda/aws"
   version             = "~> 6.0"
   timeout             = 300
@@ -17,7 +17,7 @@ module "lambda_function_app" {
 }
 
 resource "aws_iam_role_policy" "lambda_policy" {
-  role   = module.lambda_function_app.lambda_role_name
+  role   = module.lambda.lambda_role_name
   policy = jsonencode({
     Version   = "2012-10-17"
     Statement = [

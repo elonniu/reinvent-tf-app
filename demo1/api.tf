@@ -1,14 +1,14 @@
 resource "aws_api_gateway_rest_api" "api" {
-  name = "Terraform REST Example"
+  name = var.api_name
 }
 
 resource "aws_api_gateway_deployment" "deployment" {
   rest_api_id = aws_api_gateway_rest_api.api.id
   triggers    = {
     redeployment = sha1(jsonencode([
-      aws_api_gateway_resource.open_resource.id,
-      aws_api_gateway_method.open_get_method.id,
-      aws_api_gateway_integration.open_integration.id,
+      aws_api_gateway_resource.resource.id,
+      aws_api_gateway_method.method.id,
+      aws_api_gateway_integration.integration.id,
     ]))
   }
   lifecycle {
@@ -17,7 +17,7 @@ resource "aws_api_gateway_deployment" "deployment" {
 }
 
 resource "aws_cloudwatch_log_group" "logs" {
-  name = "/aws/vendedlogs/tf_rest_logs"
+  name = "/aws/vendedlogs/${var.api_name}"
 }
 
 resource "aws_api_gateway_stage" "stage" {
@@ -30,23 +30,23 @@ resource "aws_api_gateway_stage" "stage" {
   }
 }
 
-resource "aws_api_gateway_resource" "open_resource" {
+resource "aws_api_gateway_resource" "resource" {
   rest_api_id = aws_api_gateway_rest_api.api.id
   parent_id   = aws_api_gateway_rest_api.api.root_resource_id
-  path_part   = "open"
+  path_part   = "image"
 }
 
-resource "aws_api_gateway_method" "open_get_method" {
+resource "aws_api_gateway_method" "method" {
   rest_api_id   = aws_api_gateway_rest_api.api.id
-  resource_id   = aws_api_gateway_resource.open_resource.id
+  resource_id   = aws_api_gateway_resource.resource.id
   http_method   = "GET"
   authorization = "NONE"
 }
 
-resource "aws_api_gateway_integration" "open_integration" {
+resource "aws_api_gateway_integration" "integration" {
   rest_api_id             = aws_api_gateway_rest_api.api.id
-  resource_id             = aws_api_gateway_resource.open_resource.id
-  http_method             = aws_api_gateway_method.open_get_method.http_method
+  resource_id             = aws_api_gateway_resource.resource.id
+  http_method             = aws_api_gateway_method.method.http_method
   integration_http_method = "POST"
   type                    = "AWS_PROXY"
   content_handling        = "CONVERT_TO_TEXT"

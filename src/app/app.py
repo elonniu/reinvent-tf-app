@@ -47,7 +47,7 @@ def lambda_handler(event, context):
             "statusCode": 200,
             "body": json.dumps({
                 "queryStringParameters": queryStringParameters,
-                "presigned_url2": presigned_url,
+                "presigned_url": presigned_url,
             })
         }
     except Exception as e:

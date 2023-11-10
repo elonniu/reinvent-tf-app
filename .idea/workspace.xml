@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e44b7c28-9bfb-4c13-a3f1-8bde2ec0ea36" name="Changes" comment="fixed bug for shell">
+      <change beforePath="$PROJECT_DIR$/demo1/.terraform.lock.hcl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/demo1/api.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/api.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/function.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/function.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/outputs.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/terraform.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/terraform.tfvars" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/api.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/api.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/function.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/function.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/outputs.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/terraform.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/terraform.tfvars" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo2/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/main.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +86,7 @@
       <workItem from="1699605205189" duration="9000" />
       <workItem from="1699605236849" duration="7000" />
       <workItem from="1699605520025" duration="3262000" />
-      <workItem from="1699608824299" duration="976000" />
+      <workItem from="1699608824299" duration="3270000" />
     </task>
     <task id="LOCAL-00001" summary="improved design">
       <option name="closed" value="true" />
@@ -135,7 +128,31 @@
       <option name="project" value="LOCAL" />
       <updated>1699608928974</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed bug for shell">
+      <option name="closed" value="true" />
+      <created>1699609804103</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699609804103</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fixed bug for shell">
+      <option name="closed" value="true" />
+      <created>1699610477683</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699610477683</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fixed bug for shell">
+      <option name="closed" value="true" />
+      <created>1699612105491</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699612105491</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
