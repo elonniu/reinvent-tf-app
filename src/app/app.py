@@ -48,6 +48,11 @@ def lambda_handler(event, context):
 
         return {
             "statusCode": 200,
+            "headers": {
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+            },
             "body": json.dumps({
                 "queryStringParameters": queryStringParameters,
                 "presigned_url": presigned_url,
@@ -57,6 +62,11 @@ def lambda_handler(event, context):
         logger.error(e)
         return {
             "statusCode": 500,
+            "headers": {
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+            },
             "body": json.dumps({
                 "message": "Internal server error",
                 "error": str(e),
