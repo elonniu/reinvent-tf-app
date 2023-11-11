@@ -38,3 +38,4 @@ terraform.tfstate.backup
 .terraform.tfstate.lock.info
 .aws-sam-iacs
 .idea
+!/fe/image-preview/node_modules/
