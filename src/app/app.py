@@ -54,6 +54,7 @@ def lambda_handler(event, context):
                 "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
             },
             "body": json.dumps({
+                "title": "Building Serverless Applications with Terraform",
                 "queryStringParameters": queryStringParameters,
                 "presigned_url": presigned_url,
             })
@@ -68,6 +69,7 @@ def lambda_handler(event, context):
                 "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
             },
             "body": json.dumps({
+                "title": "Building Serverless Applications with Terraform",
                 "message": "Internal server error",
                 "error": str(e),
                 "event": str(event),
