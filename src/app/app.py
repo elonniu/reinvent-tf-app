@@ -24,12 +24,15 @@ def lambda_handler(event, context):
         # Open the image
         image = Image.open(io.BytesIO(file_byte_string))
 
+        if "convert" in queryStringParameters and queryStringParameters['convert'] == 'true':
+            image = image.convert('L')
+
         # Rotate the image
-        rotated_image = image.rotate(int(rotate))
+        rotateImage = image.rotate(int(rotate), expand=True)
 
         # Save the rotated image
         byte_arr = io.BytesIO()
-        rotated_image.save(byte_arr, format='JPEG')
+        rotateImage.save(byte_arr, format='JPEG')
         byte_arr = byte_arr.getvalue()
 
         # Save the rotated image to S3

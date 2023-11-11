@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e44b7c28-9bfb-4c13-a3f1-8bde2ec0ea36" name="Changes" comment="fixed bug for shell">
-      <change beforePath="$PROJECT_DIR$/demo1/.terraform.lock.hcl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/api.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/api.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/demo1/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -86,7 +87,8 @@
       <workItem from="1699605205189" duration="9000" />
       <workItem from="1699605236849" duration="7000" />
       <workItem from="1699605520025" duration="3262000" />
-      <workItem from="1699608824299" duration="3270000" />
+      <workItem from="1699608824299" duration="5121000" />
+      <workItem from="1699679615768" duration="2005000" />
     </task>
     <task id="LOCAL-00001" summary="improved design">
       <option name="closed" value="true" />
@@ -152,7 +154,31 @@
       <option name="project" value="LOCAL" />
       <updated>1699612105491</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed bug for shell">
+      <option name="closed" value="true" />
+      <created>1699612424290</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699612424290</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fixed bug for shell">
+      <option name="closed" value="true" />
+      <created>1699612516732</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699612516732</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed bug for shell">
+      <option name="closed" value="true" />
+      <created>1699612780729</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699612780729</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
