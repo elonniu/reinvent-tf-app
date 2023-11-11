@@ -42,7 +42,6 @@ resource "aws_iam_role_policy" "test_lambda_policy" {
   })
 }
 
-
 resource "aws_lambda_permission" "LambdaPermission" {
   statement_id  = "AllowAPIGatewayInvoke"
   action        = "lambda:InvokeFunction"
