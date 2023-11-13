@@ -8,3 +8,11 @@ This demo shows how to build a serverless application with Terraform based on [S
 terraform init
 terraform apply
 ```
+
+## 2. Live Development
+
+```bash
+sam local start-api
+```
+
+> Note: You need to run `sam build` if you change the code.
