@@ -9,10 +9,25 @@ terraform init
 terraform apply
 ```
 
-## 2. Live Development
+## 2. Online Debugging
+
+> If you not installed [Watchexec](https://github.com/watchexec/watchexec), please install it first.
+
+```bash
+watchexec -w ../src/app terraform apply --auto-approve
+```
+
+## 3. Local Debugging
+
+> If you not installed [Watchexec](https://github.com/watchexec/watchexec), please install it first.
 
 ```bash
 sam local start-api
 ```
 
-> Note: You need to run `sam build` if you change the code.
+Open new terminal window:
+
+```bash
+watchexec -w ../src/app sam build
+```
+
