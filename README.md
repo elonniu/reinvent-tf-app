@@ -12,3 +12,4 @@ This repository contains the code for the demos presented in the talk "Building 
 
 - [Building Serverless Applications with Terraform based on Zip](demo1/README.md)
 - [Building Serverless Applications with Terraform based on Serverless.tf](demo2/README.md)
+- [Building Serverless Applications with Terraform based on Serverless.tf - Debug](demo3/README.md)
