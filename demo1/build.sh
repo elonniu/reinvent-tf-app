@@ -16,5 +16,4 @@ mv app.zip ../
 
 cd ../
 
-sam build
 

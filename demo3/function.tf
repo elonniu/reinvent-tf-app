@@ -6,6 +6,8 @@ module "lambda" {
   function_name       = var.lambda_function_name
   handler             = "app.lambda_handler"
   runtime             = "python3.10"
+  #  store_on_s3         = true
+  #  s3_bucket           = var.bucket_name
   create_sam_metadata = true
   publish             = true
   allowed_triggers    = {
