@@ -15,6 +15,11 @@ variable "lambda_function_description" {
   default     = "Lambda function to resize images"
 }
 
+variable "bucket_name" {
+  description = "The name of the S3 bucket"
+  type        = string
+}
+
 variable "api_name" {
   description = "The name of the API Gateway"
   type        = string
