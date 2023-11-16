@@ -39,3 +39,4 @@ terraform.tfstate.backup
 .aws-sam-iacs
 .idea
 node_modules
+.terraform.lock.hcl
