@@ -10,13 +10,15 @@ logger = Logger()
 
 def lambda_handler(event, context):
     logger.info(event)
+
+    bucket = "elonniu"
+    key = "reinvent2023/test.jpeg"
+
     queryStringParameters = event['queryStringParameters']
     logger.info(queryStringParameters)
 
     try:
 
-        bucket = queryStringParameters['bucket']
-        key = queryStringParameters['key']
         rotate = queryStringParameters['rotate']
 
         file_byte_string = s3.get_object(Bucket=bucket, Key=key)['Body'].read()
@@ -36,7 +38,7 @@ def lambda_handler(event, context):
         byte_arr = byte_arr.getvalue()
 
         # Save the rotated image to S3
-        output_key = 'rotated-' + key
+        output_key = 'reinvent2023/test-result.jpeg'
         s3.put_object(Bucket=bucket, Key=output_key, Body=byte_arr)
 
         # Generate a presigned URL for the rotated image
@@ -73,6 +75,6 @@ def lambda_handler(event, context):
                 "title": "Building Serverless Applications with Demo",
                 "message": "Internal server error",
                 "error": str(e),
-                "event": str(event),
+                "event": event,
             })
         }

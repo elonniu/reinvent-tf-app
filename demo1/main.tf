@@ -15,13 +15,11 @@ provider "aws" {
   profile                  = var.profile
 }
 
-# HTTP API Gateway
 resource "aws_apigatewayv2_api" "api" {
   name          = var.api_name
   protocol_type = "HTTP"
 }
 
-# Integration between the HTTP API and the Lambda function
 resource "aws_apigatewayv2_integration" "lambda_integration" {
   api_id             = aws_apigatewayv2_api.api.id
   integration_type   = "AWS_PROXY"
@@ -29,21 +27,18 @@ resource "aws_apigatewayv2_integration" "lambda_integration" {
   integration_uri    = aws_lambda_function.lambda.invoke_arn
 }
 
-# Default route that triggers the Lambda integration
 resource "aws_apigatewayv2_route" "default_route" {
   api_id    = aws_apigatewayv2_api.api.id
   route_key = "GET /"
   target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
 }
 
-# Deploy the API
 resource "aws_apigatewayv2_stage" "example_stage" {
   api_id      = aws_apigatewayv2_api.api.id
   name        = "$default"
   auto_deploy = true
 }
 
-# Lambda permission to allow the API Gateway to invoke it
 resource "aws_lambda_permission" "api_gw_lambda" {
   statement_id  = "AllowExecutionFromAPIGateway"
   action        = "lambda:InvokeFunction"
