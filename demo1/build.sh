@@ -3,7 +3,7 @@
 rm -rf app
 rm -rf app.zip
 
-cp -r ../src/app .
+cp -r src app
 cd app
 
 # install pip requirements in current directory
