@@ -1,0 +1,39 @@
+name: Release Workflow
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Terraform Init
+        working-directory: demo3      
+        run: terraform init
+
+      - name: Terraform Apply
+        working-directory: demo3      
+        run: terraform apply -auto-approve
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
