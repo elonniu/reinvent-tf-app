@@ -1,14 +1,13 @@
-name: Merge Workflow
+name: Release Workflow
 on:
-  pull_request:
-    types:
-      - closed
-    branches:
-      - main
+  push:
+    tags:
+      - 'v*'
+    paths:
+      - demo4
 
 jobs:
-  deploy:
-    if: github.event.pull_request.merged == true
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -30,8 +29,13 @@ jobs:
         working-directory: demo4
         run: terraform apply -auto-approve
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: function-package
-          path: build/*
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
