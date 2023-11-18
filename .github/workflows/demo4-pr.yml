@@ -6,15 +6,9 @@ on:
     paths:
       - 'demo4/**'
 
-# Permission can be added at job level or workflow level    
-permissions:
-  id-token: write   # This is required for requesting the JWT
-  contents: read    # This is required for actions/checkout
-
 defaults:
   run:
     working-directory: ./demo4
-
 
 jobs:
   build:
@@ -78,6 +72,7 @@ jobs:
           TF_ACTIONS_WORKING_DIR: demo4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          debug: true
           script: |
             const output = `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
             #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
