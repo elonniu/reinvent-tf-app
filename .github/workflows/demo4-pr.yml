@@ -9,7 +9,7 @@ on:
 # Permission can be added at job level or workflow level    
 permissions:
   id-token: write
-  contents: write
+  contents: read
   pull-requests: write
 
 defaults:
