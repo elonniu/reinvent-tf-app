@@ -1,4 +1,4 @@
-name: PR Workflow
+name: Demo4 PR Workflow
 on:
   pull_request:
     branches:

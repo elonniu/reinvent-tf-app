@@ -1,4 +1,4 @@
-name: Merge Workflow
+name: Demo4 Merge Workflow
 on:
   pull_request:
     types:
