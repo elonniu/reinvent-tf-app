@@ -6,9 +6,15 @@ on:
     paths:
       - 'demo4/**'
 
+# Permission can be added at job level or workflow level    
+permissions:
+  id-token: write
+  contents: write
+
 defaults:
   run:
     working-directory: ./demo4
+
 
 jobs:
   build:
