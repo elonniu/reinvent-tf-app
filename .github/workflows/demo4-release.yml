@@ -4,7 +4,7 @@ on:
     tags:
       - 'v*'
     paths:
-      - demo4
+      - 'demo4/**'
 
 jobs:
   release:
