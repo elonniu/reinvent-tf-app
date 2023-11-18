@@ -1,0 +1,39 @@
+name: Merge Workflow
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+    paths:
+      - demo4
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Terraform Init
+        working-directory: demo4
+        run: terraform init
+
+      - name: Terraform Apply
+        working-directory: demo4
+        run: terraform apply -auto-approve
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: function-package
+          path: builds/*

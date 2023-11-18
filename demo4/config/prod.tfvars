@@ -1,0 +1,5 @@
+aws_region           = "ap-northeast-1"
+aws_role_arn         = "prod_role_arn"
+api_name             = "pillow-api"
+lambda_function_name = "pillow-lambda"
+source_dir           = "./src/"
