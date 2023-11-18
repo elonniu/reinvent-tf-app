@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - demo4
+      - 'demo4/**'
 
 jobs:
   deploy:
