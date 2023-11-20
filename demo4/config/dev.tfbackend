@@ -1,5 +1,5 @@
 bucket = "reinvent-serverless-terraform"
-key    = "dev/demo4/terraform.tfstate"
+key    = "demo4/terraform.tfstate"
 region = "us-west-2"
 dynamodb_table = "reinvent-serverless-terraform-lockdb"
 assume_role = {
