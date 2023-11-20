@@ -48,7 +48,7 @@ jobs:
         run: terraform workspace select dev
 
       - name: Terraform Apply - DEV
-        run: terraform apply -auto-approve -var-file="config/dev.tfvars"        
+        run: terraform apply -auto-approve -var-file="config/dev.tfvars" -var="provider_role_arn=${{ secrets.AWS_PROVIDER_ROLE_DEV }}"
 
         
   deploy_test:
@@ -82,4 +82,4 @@ jobs:
         run: terraform workspace select test
 
       - name: Terraform Apply - TEST
-        run: terraform apply -auto-approve -var-file="config/test.tfvars"
+        run: terraform apply -auto-approve -var-file="config/test.tfvars" -var="provider_role_arn=${{ secrets.AWS_PROVIDER_ROLE_TEST }}"
