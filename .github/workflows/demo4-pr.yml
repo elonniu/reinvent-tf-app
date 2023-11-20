@@ -16,7 +16,6 @@ defaults:
   run:
     working-directory: ./demo4
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -43,7 +42,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::575302032415:role/GithubActionRole
+          role-to-assume: arn:aws:iam::333143794874:role/GithubActionExecutionRole
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: us-west-2
 
@@ -56,12 +55,20 @@ jobs:
 
       - name: Terraform fmt
         id: fmt
-        run: terraform fmt -check
-        continue-on-error: true
+        run: terraform fmt -check -recursive
       
       - name: Terraform Init
         id: init
-        run: terraform init
+        run: |
+          terraform init -backend-config="config/dev.tfbackend"
+
+      - name: Terraform Select Dev workspace
+        id: workspace
+        run: |
+          terraform workspace new dev || echo "dev workspace created"
+          terraform workspace new test || echo "test workspace created"
+          terraform workspace new prod || echo "prod workspace created"
+          terraform workspace select dev
 
       - name: Terraform Validate
         id: validate

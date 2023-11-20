@@ -1,14 +1,14 @@
 terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.25"
-    }
-  }
-  required_version = ">= 1.6.3"
+  backend "s3" {}
 }
 
-provider "aws" {}
+provider "aws" {
+  region = var.aws_region
+
+  assume_role {
+    role_arn = var.provider_role_arn
+  }
+}
 
 module "api_gateway" {
   source = "terraform-aws-modules/apigateway-v2/aws"
