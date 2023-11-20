@@ -1,5 +1,10 @@
 terraform {
-  backend "s3" {}
+  backend "s3" {
+    bucket         = "reinvent-serverless-terraform"
+    key            = "demo4/terraform.tfstate"
+    region         = "us-west-2"
+    dynamodb_table = "reinvent-serverless-terraform-lockdb"
+  }
 }
 
 provider "aws" {

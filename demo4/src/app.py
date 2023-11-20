@@ -57,7 +57,7 @@ def lambda_handler(event, context):
                 "Content-Type": "application/json"
             },
             "body": json.dumps({
-                "title": "Building Serverless Applications with Terraform",
+                "title": "Building Serverless Applications with Terraform - this is demo4",
                 "presigned_url": presigned_url,
             })
         }
