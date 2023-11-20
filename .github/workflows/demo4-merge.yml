@@ -38,7 +38,7 @@ jobs:
           aws-region: us-west-2
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v2
 
       - name: Terraform Init - DEV
         run: terraform init -backend-config="config/dev.tfbackend"
@@ -47,7 +47,7 @@ jobs:
         run: terraform workspace select dev
 
       - name: Terraform Apply - DEV
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve -var-file="config/dev.tfvars"
 
       - name: Terraform Init - TEST
         run: terraform init -backend-config="config/test.tfbackend"
@@ -56,4 +56,4 @@ jobs:
         run: terraform workspace select test
 
       - name: Terraform Apply - TEST
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve -var-file="config/test.tfvars"
