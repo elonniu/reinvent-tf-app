@@ -65,9 +65,6 @@ jobs:
       - name: Terraform Select Dev workspace
         id: workspace
         run: |
-          terraform workspace new dev || echo "done"
-          terraform workspace new test || echo "done"
-          terraform workspace new prod || echo "done"
           terraform workspace select dev
 
       - name: Terraform Validate
