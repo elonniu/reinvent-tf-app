@@ -16,7 +16,7 @@ defaults:
     working-directory: ./demo4
 
 jobs:
-  release:
+  release_to_prod:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
