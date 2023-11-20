@@ -1,0 +1,85 @@
+name: Demo4 Merge Workflow
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+    paths:
+      - 'demo4/**'
+
+# Permission can be added at job level or workflow level    
+permissions:
+  id-token: write
+  contents: read
+
+defaults:
+  run:
+    working-directory: ./demo4
+
+jobs:
+  deploy_dev:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_GITHUB_ACTION_ROLE }}
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: us-west-2
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init - DEV
+        run: |
+          terraform init -backend-config="role_arn=${{ secrets.AWS_BACKEND_ROLE_DEV }}"
+
+      - name: Terraform select DEV workspace
+        run: terraform workspace select dev
+
+      - name: Terraform Apply - DEV
+        run: terraform apply -auto-approve -var-file="config/dev.tfvars" -var="provider_role_arn=${{ secrets.AWS_PROVIDER_ROLE_DEV }}"
+
+        
+  deploy_test:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    needs: ['deploy_dev']
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_GITHUB_ACTION_ROLE }}
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: us-west-2
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init - TEST
+        run: |
+          terraform init -backend-config="role_arn=${{ secrets.AWS_BACKEND_ROLE_TEST }}"
+
+      - name: Terraform select TEST workspace
+        run: terraform workspace select test
+
+      - name: Terraform Apply - TEST
+        run: terraform apply -auto-approve -var-file="config/test.tfvars" -var="provider_role_arn=${{ secrets.AWS_PROVIDER_ROLE_TEST }}"

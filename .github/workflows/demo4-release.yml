@@ -1,0 +1,49 @@
+name: Demo4 Release Workflow
+on:
+  push:
+    tags:
+      - 'v*'
+    paths:
+      - 'demo4/**'
+
+# Permission can be added at job level or workflow level    
+permissions:
+  id-token: write
+  contents: read
+
+defaults:
+  run:
+    working-directory: ./demo4
+
+jobs:
+  release_to_prod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_GITHUB_ACTION_ROLE }}
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: us-west-2
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init - PROD
+        run: |
+          terraform init -backend-config="role_arn=${{ secrets.AWS_BACKEND_ROLE_PROD }}"
+
+      - name: Terraform select PROD workspace
+        run: terraform workspace select prod
+
+      - name: Terraform Apply - PROD
+        run: terraform apply -auto-approve -var-file="config/prod.tfvars" -var="provider_role_arn=${{ secrets.AWS_PROVIDER_ROLE_PROD }}"
+    
