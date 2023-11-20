@@ -41,7 +41,8 @@ jobs:
         uses: hashicorp/setup-terraform@v2
 
       - name: Terraform Init - DEV
-        run: terraform init -backend-config="config/dev.tfbackend"
+        run: |
+          terraform init -backend-config="assume_role.role_arn=${{ secrets.AWS_BACKEND_ROLE_DEV }}"
 
       - name: Terraform select DEV workspace
         run: terraform workspace select dev
@@ -74,7 +75,8 @@ jobs:
         uses: hashicorp/setup-terraform@v2
 
       - name: Terraform Init - TEST
-        run: terraform init -backend-config="config/test.tfbackend"
+        run: |
+          terraform init -backend-config="assume_role.role_arn=${{ secrets.AWS_BACKEND_ROLE_TEST }}"
 
       - name: Terraform select TEST workspace
         run: terraform workspace select test
