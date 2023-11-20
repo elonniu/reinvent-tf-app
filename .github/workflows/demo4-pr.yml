@@ -60,7 +60,7 @@ jobs:
       - name: Terraform Init
         id: init
         run: |
-          terraform init -backend-config="assume_role.role_arn=${{ secrets.AWS_BACKEND_ROLE_DEV }}"
+          terraform init -backend-config="role_arn=${{ secrets.AWS_BACKEND_ROLE_DEV }}"
 
       - name: Terraform Select Dev workspace
         id: workspace

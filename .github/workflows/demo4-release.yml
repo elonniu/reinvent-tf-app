@@ -39,7 +39,7 @@ jobs:
 
       - name: Terraform Init - PROD
         run: |
-          terraform init -backend-config="assume_role.role_arn=${{ secrets.AWS_BACKEND_ROLE_PROD }}"
+          terraform init -backend-config="role_arn=${{ secrets.AWS_BACKEND_ROLE_PROD }}"
 
       - name: Terraform select PROD workspace
         run: terraform workspace select prod
