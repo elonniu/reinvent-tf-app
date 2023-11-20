@@ -47,7 +47,7 @@ jobs:
         run: terraform workspace select dev
 
       - name: Terraform Apply - DEV
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve -var-file="config/dev.tfvars"
 
       - name: Terraform Init - TEST
         run: terraform init -backend-config="config/test.tfbackend"
@@ -56,4 +56,4 @@ jobs:
         run: terraform workspace select test
 
       - name: Terraform Apply - TEST
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve -var-file="config/test.tfvars"
