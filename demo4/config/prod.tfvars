@@ -1,5 +1,4 @@
 aws_region           = "us-west-2"
-provider_role_arn    = "arn:aws:iam::850148509004:role/serverless-tf-resource-role-prod"
 api_name             = "pillow-api"
 lambda_function_name = "pillow-lambda"
 source_dir           = "./src/"

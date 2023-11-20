@@ -45,5 +45,5 @@ jobs:
         run: terraform workspace select prod
 
       - name: Terraform Apply - PROD
-        run: terraform apply -auto-approve -var-file="config/prod.tfvars"
+        run: terraform apply -auto-approve -var-file="config/prod.tfvars" -var="provider_role_arn=${{ secrets.AWS_PROVIDER_ROLE_PROD }}"
     
