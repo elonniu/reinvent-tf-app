@@ -1,5 +1,5 @@
-aws_region           = "ap-northeast-1"
-aws_role_arn         = "prod_role_arn"
+aws_region           = "us-west-2"
+provider_role_arn    = "arn:aws:iam::333143794874:role/serverless-tf-resource-role-prod"
 api_name             = "pillow-api"
 lambda_function_name = "pillow-lambda"
 source_dir           = "./src/"

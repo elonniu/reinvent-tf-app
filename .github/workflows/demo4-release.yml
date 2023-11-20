@@ -1,10 +1,10 @@
-name: Release Workflow
+name: Demo4 Release Workflow
 on:
   push:
     tags:
       - 'v*'
     paths:
-      - demo4
+      - 'demo4/**'
 
 jobs:
   release:

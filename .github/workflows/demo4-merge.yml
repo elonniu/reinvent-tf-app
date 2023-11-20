@@ -1,4 +1,4 @@
-name: Merge Workflow
+name: Demo4 Merge Workflow
 on:
   pull_request:
     types:
@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - demo4
+      - 'demo4/**'
 
 jobs:
   deploy:
@@ -21,19 +21,30 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_GITHUB_ACTION_ROLE }}
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: us-west-2
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
 
-      - name: Terraform Init
-        working-directory: demo4
-        run: terraform init
+      - name: Terraform Init - DEV
+        run: terraform init -backend-config="config/dev.tfbackend"
 
-      - name: Terraform Apply
-        working-directory: demo4
+      - name: Terraform select DEV workspace
+        run: terraform workspace select dev
+
+      - name: Terraform Apply - DEV
         run: terraform apply -auto-approve
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: function-package
-          path: builds/*
+      - name: Terraform Init - TEST
+        run: terraform init -backend-config="config/test.tfbackend"
+
+      - name: Terraform select TEST workspace
+        run: terraform workspace select test
+
+      - name: Terraform Apply - TEST
+        run: terraform apply -auto-approve

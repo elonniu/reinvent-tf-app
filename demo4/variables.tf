@@ -4,6 +4,11 @@ variable "aws_region" {
   default     = "us-west-2"
 }
 
+variable "provider_role_arn" {
+  description = "The IAM Role used to deploy resources"
+  type        = string
+}
+
 variable "lambda_function_name" {
   description = "The name of the Lambda function"
   type        = string

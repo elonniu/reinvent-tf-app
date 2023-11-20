@@ -1,0 +1,7 @@
+bucket = "reinvent-serverless-terraform"
+key    = "demo4/terraform.tfstate"
+region = "us-west-2"
+dynamodb_table = "reinvent-serverless-terraform-lockdb"
+assume_role = {
+    role_arn = "arn:aws:iam::333143794874:role/serverless-tf-backend-role"
+}
