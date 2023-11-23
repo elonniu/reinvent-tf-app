@@ -53,7 +53,8 @@ module "lambda" {
   create_sam_metadata = true
   publish             = true
   environment_variables = {
-    IMAGE_BUCKET = var.image_bucket
+    IMAGE_BUCKET = var.image_bucket,
+    APP_STAGE = var.app_stage,
   }
   allowed_triggers = {
     APIGatewayAny = {

@@ -13,6 +13,7 @@ def lambda_handler(event, context):
     logger.info(event)
 
     bucket = os.environ.get("IMAGE_BUCKET")
+    app_stage = os.environ.get("APP_STAGE")
     key = "reinvent2023/test.jpeg"
 
     if 'queryStringParameters' not in event:
@@ -30,7 +31,7 @@ def lambda_handler(event, context):
                 "Content-Type": "application/json"
             },
             "body": json.dumps({
-                "title": "Building Serverless Applications with Terraform",
+                "title": f"Building Serverless Applications with Terraform - {app_stage}",
                 "presigned_url": presigned_url,
             })
         }
@@ -78,7 +79,7 @@ def lambda_handler(event, context):
                 "Content-Type": "application/json"
             },
             "body": json.dumps({
-                "title": "Building Serverless Applications with Terraform",
+                "title": f"Building Serverless Applications with Terraform - {app_stage}",
                 "presigned_url": presigned_url,
             })
         }
@@ -93,7 +94,7 @@ def lambda_handler(event, context):
                 "Content-Type": "application/json"
             },
             "body": json.dumps({
-                "title": "Building Serverless Applications with Demo",
+                "title": f"Building Serverless Applications with Terraform - {app_stage}",
                 "message": "Internal server error",
                 "error": str(e),
                 "event": event,
