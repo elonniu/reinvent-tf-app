@@ -41,18 +41,22 @@ module "api_gateway" {
 }
 
 module "lambda" {
-  source              = "terraform-aws-modules/lambda/aws"
-  version             = "~> 6.0"
-  timeout             = 300
-  source_path         = var.source_dir
-  function_name       = var.lambda_function_name
-  handler             = "app.lambda_handler"
-  runtime             = "python3.10"
+  source                = "terraform-aws-modules/lambda/aws"
+  version               = "~> 6.0"
+  timeout               = 300
+  source_path           = var.source_dir
+  function_name         = var.lambda_function_name
+  handler               = "app.lambda_handler"
+  runtime               = "python3.10"
   #  store_on_s3         = true
   #  s3_bucket           = var.bucket_name
-  create_sam_metadata = true
-  publish             = true
-  allowed_triggers    = {
+  create_sam_metadata   = true
+  publish               = true
+  environment_variables = {
+    IMAGE_BUCKET = var.image_bucket,
+    APP_STAGE    = var.app_stage,
+  }
+  allowed_triggers = {
     APIGatewayAny = {
       service    = "apigateway"
       source_arn = "${module.api_gateway.apigatewayv2_api_execution_arn}/*/*"
@@ -71,7 +75,7 @@ resource "aws_iam_role_policy" "lambda_policy" {
           "s3:PutObject",
         ]
         Effect   = "Allow"
-        Resource = ["*"]
+        Resource = ["arn:aws:s3:::${var.image_bucket}/*"]
       },
     ]
   })

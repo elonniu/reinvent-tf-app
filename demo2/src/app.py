@@ -3,6 +3,7 @@ from PIL import Image
 import io
 from aws_lambda_powertools import Logger
 import json
+import os
 
 s3 = boto3.client('s3')
 logger = Logger()
@@ -11,7 +12,7 @@ logger = Logger()
 def lambda_handler(event, context):
     logger.info(event)
 
-    bucket = "elonniu"
+    bucket = os.environ.get("IMAGE_BUCKET")
     key = "reinvent2023/test.jpeg"
 
     queryStringParameters = event['queryStringParameters']
