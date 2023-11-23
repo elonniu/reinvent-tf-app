@@ -15,6 +15,10 @@ def lambda_handler(event, context):
     bucket = os.environ.get("IMAGE_BUCKET")
     app_stage = os.environ.get("APP_STAGE")
     key = "reinvent2023/test.jpeg"
+    if app_stage == 'prod':
+        title = f"Building Serverless Applications with Terraform"
+    else:
+        title = f"{app_stage} - Building Serverless Applications with Terraform"
 
     if 'queryStringParameters' not in event:
         presigned_url = s3.generate_presigned_url(
@@ -31,7 +35,7 @@ def lambda_handler(event, context):
                 "Content-Type": "application/json"
             },
             "body": json.dumps({
-                "title": f"Building Serverless Applications with Terraform - {app_stage}",
+                "title": title,
                 "presigned_url": presigned_url,
             })
         }
@@ -79,7 +83,7 @@ def lambda_handler(event, context):
                 "Content-Type": "application/json"
             },
             "body": json.dumps({
-                "title": f"Building Serverless Applications with Terraform - {app_stage}",
+                "title": title,
                 "presigned_url": presigned_url,
             })
         }
@@ -94,7 +98,7 @@ def lambda_handler(event, context):
                 "Content-Type": "application/json"
             },
             "body": json.dumps({
-                "title": f"Building Serverless Applications with Terraform - {app_stage}",
+                "title": title,
                 "message": "Internal server error",
                 "error": str(e),
                 "event": event,
