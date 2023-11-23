@@ -54,7 +54,7 @@ module "lambda" {
   publish             = true
   environment_variables = {
     IMAGE_BUCKET = var.image_bucket,
-    APP_STAGE = var.app_stage,
+    APP_STAGE    = var.app_stage,
   }
   allowed_triggers = {
     APIGatewayAny = {
