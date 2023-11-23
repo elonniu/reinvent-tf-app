@@ -14,6 +14,11 @@ variable "lambda_function_name" {
   type        = string
 }
 
+variable "image_bucket" {
+  description = "The name of the image bucket name"
+  type        = string
+}
+
 variable "lambda_function_description" {
   description = "The description of the Lambda function"
   type        = string

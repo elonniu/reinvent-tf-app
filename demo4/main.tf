@@ -52,6 +52,9 @@ module "lambda" {
   #  s3_bucket           = var.bucket_name
   create_sam_metadata = true
   publish             = true
+  environment_variables = {
+    BUCKET_NAME = var.image_bucket
+  }
   allowed_triggers = {
     APIGatewayAny = {
       service    = "apigateway"
