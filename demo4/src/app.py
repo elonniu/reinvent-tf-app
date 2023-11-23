@@ -15,6 +15,7 @@ def lambda_handler(event, context):
     bucket = os.environ.get("IMAGE_BUCKET")
     app_stage = os.environ.get("APP_STAGE")
     key = "reinvent2023/test.jpeg"
+
     if app_stage == 'prod':
         title = f"Building Serverless Applications with Terraform"
     else:
