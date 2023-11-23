@@ -72,6 +72,12 @@ resource "aws_lambda_function" "lambda" {
   description   = var.lambda_function_description
   role          = aws_iam_role.lambda_role.arn
   runtime       = "python3.10"
+  environment {
+    variables = {
+      "IMAGE_BUCKET" = var.image_bucket,
+      "APP_STAGE"    = var.app_stage,
+    }
+  }
 }
 
 resource "aws_iam_role_policy" "test_lambda_policy" {
@@ -85,7 +91,7 @@ resource "aws_iam_role_policy" "test_lambda_policy" {
           "s3:PutObject",
         ]
         Effect   = "Allow"
-        Resource = ["*"]
+        Resource = ["arn:aws:s3:::${var.image_bucket}/*"]
       },
     ]
   })

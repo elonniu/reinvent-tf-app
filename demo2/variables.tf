@@ -25,6 +25,11 @@ variable "api_name" {
   type        = string
 }
 
+variable "image_bucket" {
+  description = "The name of the image bucket name"
+  type        = string
+}
+
 variable "api_description" {
   description = "The description of the API Gateway"
   type        = string
@@ -33,6 +38,11 @@ variable "api_description" {
 
 variable "source_dir" {
   description = "Local path to the Lambda function code"
+  type        = string
+}
+
+variable "app_stage" {
+  description = "The name of the Application stage"
   type        = string
 }
 
