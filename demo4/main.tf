@@ -53,7 +53,7 @@ module "lambda" {
   create_sam_metadata = true
   publish             = true
   environment_variables = {
-    BUCKET_NAME = var.image_bucket
+    IMAGE_BUCKET = var.image_bucket
   }
   allowed_triggers = {
     APIGatewayAny = {
@@ -74,7 +74,7 @@ resource "aws_iam_role_policy" "lambda_policy" {
           "s3:PutObject",
         ]
         Effect   = "Allow"
-        Resource = ["*"]
+        Resource = ["arn:aws:s3:::${var.image_bucket}/*"]
       },
     ]
   })
