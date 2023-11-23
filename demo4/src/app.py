@@ -14,6 +14,26 @@ def lambda_handler(event, context):
     bucket = "elonniu"
     key = "reinvent2023/test.jpeg"
 
+    if 'queryStringParameters' not in event:
+        presigned_url = s3.generate_presigned_url(
+            'get_object',
+            Params={'Bucket': bucket, 'Key': key},
+            ExpiresIn=3600  # URL expires in 1 hour
+        )
+        return {
+            "statusCode": 200,
+            "headers": {
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+                "Content-Type": "application/json"
+            },
+            "body": json.dumps({
+                "title": "Building Serverless Applications with Terraform",
+                "presigned_url": presigned_url,
+            })
+        }
+
     queryStringParameters = event['queryStringParameters']
     logger.info(queryStringParameters)
 
