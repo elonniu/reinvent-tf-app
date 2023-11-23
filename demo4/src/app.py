@@ -12,7 +12,7 @@ logger = Logger()
 def lambda_handler(event, context):
     logger.info(event)
 
-    bucket = os.envget("IMAGE_BUCKET")
+    bucket = os.environ.get("IMAGE_BUCKET")
     key = "reinvent2023/test.jpeg"
 
     if 'queryStringParameters' not in event:
