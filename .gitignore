@@ -40,3 +40,4 @@ terraform.tfstate.backup
 .idea
 node_modules
 .terraform.lock.hcl
+/venv/

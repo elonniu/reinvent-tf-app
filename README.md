@@ -1,10 +1,10 @@
 # Building Serverless Applications with Terraform
 
-This repository contains the code for the demos presented in the talk "Building Serverless Applications with Terraform".
+This repository contains the code for the demos presented in the talk "Building Serverless Applications with Terraform"
 
 ## Requirements
 
-- [Terraform](https://www.terraform.io/downloads.html) >= v1.6.3
+- [Terraform](https://www.terraform.io/downloads.html) >= v1.6.4
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) >= 2.13.27
 - [Docker](https://docs.docker.com/install/) >= 24.0.6
 
