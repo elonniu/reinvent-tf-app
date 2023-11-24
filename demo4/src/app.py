@@ -17,7 +17,7 @@ def lambda_handler(event, context):
     key = "reinvent2023/test.jpeg"
 
     if app_stage == 'prod':
-        title = f"Building Serverless Applications with Terraform - CICD"
+        title = f"Building Serverless Applications with Terraform"
     else:
         title = f"{app_stage} - Building Serverless Applications with Terraform"
 
